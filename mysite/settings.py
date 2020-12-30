@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks', # 追加
     'app', # 追加
+    'accounts', # 追加
+    'django.contrib.sites', # 追加
+    'allauth',  # 追加
+    'allauth.account', # 追加
+    'allauth.socialaccount', # 追加
 ]
 
 MIDDLEWARE = [
@@ -120,3 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
